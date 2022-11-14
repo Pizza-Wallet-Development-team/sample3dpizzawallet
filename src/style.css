@@ -1,0 +1,213 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    /* height: -webkit-fill-available; */
+}
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+body {
+    overflow: hidden;
+    background-color: #000000;
+    /* min-height: 100vh;
+    min-height: -webkit-fill-available; */
+}
+
+.overlay{
+    opacity:1;
+    background-color:rgb(0, 0, 0);
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    pointer-events:none;
+    transition: opacity 1s;
+}
+
+.overlay.fade{
+    opacity:0;
+}
+
+h1 {
+    position: absolute;
+    margin: auto;
+    bottom: -5vh;
+    width: 30vh;
+    min-width: 30vmax;
+    text-align: center;
+    font-family: 'Amatic SC';
+    font-size: 2vmax;
+    color: #ffffff;
+    opacity: 0.75;
+    animation: pulse 2.5s linear infinite;
+}
+
+.start{
+    position: fixed;
+    top: calc((100vh - 100px)/2);
+    right: calc((100vw - 200px)/2);
+    width: 200px;
+    height: 100px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    font-size: 4rem;
+    font-family: 'Amatic SC';
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: none;
+}
+
+.start.fadeIn{
+    opacity:1;
+}
+
+.start.fadeOut{
+    opacity:0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .start:hover { color: #7b00ff; }
+  }
+
+
+#cooking {
+    position: relative;
+    margin: auto ;
+    top: calc((100vh - 55vmax)/2);
+    width: 30vh;
+    min-width: 30vmax;
+    height: 30vh;
+    min-height: 30vmax;
+    background-color: #7b00ff00;
+    overflow: visible;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#cooking.fade {
+    opacity: 0;
+}
+
+#cooking #area {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    background-color: #00ffcc00;
+    width: 50%;
+    height: 50%;
+    transform-origin: 15% 60%;
+}
+
+
+#cooking .fums {
+    position: absolute;
+    bottom: 10%;
+    right: 37%;
+    width: 35%;
+    height: 60%;
+    border-radius: 100%;
+    box-shadow: 0 0 0.25vh #ffffff;
+    opacity: 0;
+}
+
+#cooking .fums:nth-child(1) {
+    margin-top: -8vh;
+    left: 40%;
+    width: 2.5vh;
+    height: 2.5vh;
+    background-color: #ffffff;
+    animation: bubble 2s infinite;
+}
+
+#cooking .fums:nth-child(2) {
+    margin-top: -6vh;
+    left: 50%;
+    width: 2vh;
+    height: 2vh;
+    background-color: #ffffff;
+    animation: bubble 2s ease-in-out 0.35s infinite; 
+}
+
+#cooking .fums:nth-child(3) {
+    margin-top: -7vh;
+    left: 60%;
+    width: 1.5vh;
+    height: 1.5vh;
+    background-color: #ffffff;
+    animation: bubble 1.5s infinite;
+}
+
+#cooking .fums:nth-child(4) {
+    margin-top: -5vh;
+    left: 65%;
+    width: 1.2vh;
+    height: 1.2vh;
+    background-color: #ffffff;
+    animation: bubble 1.8s  infinite;
+}
+
+#cooking .fums:nth-child(5) {
+    margin-top: -7vh;
+    left: 60%;
+    width: 1.2vh;
+    height: 1.2vh;
+    background-color: #ffffff;
+    animation: bubble 1.8s  infinite;
+}
+
+@keyframes bubble {
+    0% {
+        transform: scale(0.15, 0.15);
+        top: 100%;
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1, 1.1);
+        opacity: .4;
+    }
+    100% {
+        transform: scale(0.33, 0.33);
+        top: 60%;
+        opacity: 0;
+    }
+}
+
+#pizza {
+    display: block;
+    position: absolute;
+    background-color: #ddda9a;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 10%;
+    left: 40%;
+    transform: translateX(-50%) translateY(10%) rotateX(70deg) skewX(-10deg) rotateY(10deg);
+    box-shadow: 0px -7px 10px 3px #837043, 0px 0px 10px 12px #917d4d, 0px 5px 10px 34px #a89158, 5px 10px 0px 43px #917d4d, 5px 10px 5px 43px #917d4d, 8px 10px 0px 10px #837043, 15px 265px 60px -95px rgba(0, 0, 0, 0.3); 
+    animation-name: tossing;
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+  }
+  
+  @keyframes tossing {
+    0% {
+      transform: translateX(-50%) translateY(10%) rotateX(70deg) skewX(-10deg) rotateY(10deg);
+    }
+    50% {
+      transform: translateX(-50%) translateY(4%) rotateX(71deg) skewX(-10deg) rotateY(7deg) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) translateY(10%) rotateX(70deg) skewX(-10deg) rotateY(10deg);
+    }
+  }
