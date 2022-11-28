@@ -3,7 +3,7 @@ import Experience from '../Experience.js'
 import Environment from './Environment.js'
 import PizzaMan from './PizzaMan.js'
 import PizzaShop from './PizzaShop.js'
-import PizzaS from './PizzaS.js'
+
 
 
 export default class World
@@ -22,7 +22,7 @@ export default class World
             //this.ramenShop = new RamenShop()
             this.pizzaShop = new PizzaShop()
             this.pizzaMan = new PizzaMan()
-            this.pizzaS = new PizzaS()
+           
 
             this.lite = new THREE.AmbientLight(0xffffff)
             this.scene.add( this.lite )

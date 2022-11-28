@@ -11,11 +11,11 @@ export default [
         path: 'models/character/pizzaMan.glb'
     },
 
-    {
-        name: 'pizzaSM',
-        type: 'gltfModel',
-        path: 'models/pizzaShop/scene.glb'
-    },
+    // {
+    //     name: 'pizzaS',
+    //     type: 'gltfModel',
+    //     path: 'models/pizzaShop/scene.glb'
+    // },
 
     // new arcade
 
