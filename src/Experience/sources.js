@@ -48,12 +48,6 @@ export default [
     //team
 
     {
-        name: 'alphaTexture',
-        type: 'texture',
-        path: 'textures/team/alpha.png'
-    },
-
-    {
         name: 'ankurTexture',
         type: 'texture',
         path: 'textures/team/ankur.png'
